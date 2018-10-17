@@ -1,0 +1,29 @@
+<section class="container">
+  <ng-container *ngFor="let item of itemsContainer">
+    
+    <mat-card>
+
+      <mat-card-title>{{item.brand}} {{item.processor.brand}} {{item.processor.model_number}}</mat-card-title>
+
+      <mat-card-content>
+        <p>
+          <img src="https://img.zap.co.il/pics/0/5/1/2/44482150c.gif" />
+        </p>
+
+        <section class="center">
+          {{item.screen.display_type}}{{item.screen.resolution}}
+          {{item.screen.screen_size}}{{item.screen.touch_screen}}
+        </section>
+
+        <p class="center">{{'2000' | currency: 'ILS' }}</p>
+
+        <section class="center">
+          <button mat-button>לפרטים וקניה</button>
+        </section>
+
+      </mat-card-content>
+      
+    </mat-card>
+
+  </ng-container>
+</section>
